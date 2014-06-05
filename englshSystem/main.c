@@ -5,11 +5,20 @@
 //DECLARAÇÃO DE VARIAVEIS GLOBAIS
 char nome_usuario[50];
 
+//FUNÇÃO PULAR LINHA
+int pular_linha(){
+printf("\n\n\n\n\n\n\n\n");
+}
+//FIM FUNÇÃO PULAR LINHA
+
+
+
 
 //FUNÇÃO MENU DE OPÇÕES
 int menu()
 {
-    system("cls");
+	int opcao; //DELARAÇÃO VARIALVEL LOCAL INTEIRA
+    system("cls"); //LIMPAR TELA
 	printf("                            ########## MENU ###########");
 	printf("\n\n");
 	printf("\n                   1 - Text: An Autopsy of a Dead Social Network");
@@ -19,16 +28,41 @@ int menu()
 	printf("\n                   5 - Exit");
 	printf("\n\n");
 	printf("       Enter the option:");
-    system("pause");
+	scanf("%i",&opcao);
+	switch (opcao){  //ARGUMENTO DO CASO
+	case 3:
+	    //        ###### OPÇÃO3 - TESTE #######
+                        char resposta[]
+                        system("cls"); //LIMPAR TELA
+                        pular_linha();
+                        printf("                                  Press enter to start");
+                        system("pause>null");
+                        system("cls"); //LIMPAR TELA
+                        pular_linha();
+                        printf("                           1) What is Friendster?\n                           a) Brand\n                           b) City\n                           c) Social Network\n                           d) Game\n                           	Answer: "); //PERGUNTA UM
+                        system("pause>null");
+
+
+
+
+
+                        break;
+         //  #####FIM OPÇÃO 3 - TESTE #######
+
+        default:
+        printf("invalid");
+                                        }
+        menu();
+
+
+
+
+        system("pause");
 	return 0;
 }
 // FIM MENU DE OPÇÕES
-int pular_linha(){
-printf("\n\n\n\n\n\n\n\n");    
-}
-//FUNÇÃO PULAR LINHA
 
-//FIM FUNÇÃO PULAR LINHA
+
 
 //LOGIN DO SISTEMA
 int main(){
@@ -39,7 +73,7 @@ system("cls");
 pular_linha();
 printf("                                Welcome %s",nome_usuario);
 pular_linha();
-system("\npause");
+system("\npause>null");
 menu();
 }
 //FIM DO LOGIN
