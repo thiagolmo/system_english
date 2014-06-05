@@ -1,5 +1,6 @@
 #include <stdio.h>  //DECLARAÇÃO DE BIBLIOTECAS
 #include <stdlib.h> //DECLARAÇÃO DE BIBLIOTECAS
+#include <string.h> //DECLARAÇÃO DE BIBLIOTECAS
 
 
 //DECLARAÇÃO DE VARIAVEIS GLOBAIS
@@ -32,7 +33,7 @@ int menu()
 	switch (opcao){  //ARGUMENTO DO CASO
 	case 3:
 	    //        ###### OPÇÃO3 - TESTE #######
-                        char resposta[]
+                        char aux[100],resposta[10];
                         system("cls"); //LIMPAR TELA
                         pular_linha();
                         printf("                                  Press enter to start");
@@ -40,6 +41,12 @@ int menu()
                         system("cls"); //LIMPAR TELA
                         pular_linha();
                         printf("                           1) What is Friendster?\n                           a) Brand\n                           b) City\n                           c) Social Network\n                           d) Game\n                           	Answer: "); //PERGUNTA UM
+                        scanf("%s",&aux);
+                        resposta[1]=strupr(aux);
+                        system("cls"); //LIMPAR TELA
+                        pular_linha();
+                        printf("                           2) Complete the sentence: \"At its peak, the network had well over ______ users, many in south east Asia\".\n                           a) 20 million\n                           b) 1/5 dozen\n                           c) 50 trillion\n                           d) 100 million\n                           	Answer: "); //PERGUNTA DOIS                         d) Game\n                           	Answer: "); //PERGUNTA UM
+                        scanf("%s",&resposta[2]);
                         system("pause>null");
 
 
