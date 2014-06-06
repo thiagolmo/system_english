@@ -101,9 +101,16 @@ int menu()
             system("cls");
 			pular_linha();
 
+            //## RESULTADO ##
+            system("cls"); //LIMPAR TELA
 
-            printf("%i %i",certo,errado);
-            system("pause");
+            printf("\n\n\n                          %c%c%c%c%c%c%c%c%c%c Test Result %c%c%c%c%c%c%c%c%c%c",205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205);
+            printf("\n\n");
+            printf("\n                   Name: %s",nome_usuario);
+            printf("\n                   Correct answers: : %i",certo);
+            printf("\n                   Wrong answers: %i\n\n",errado);
+            printf("\n\n                                 Back to menu %c",16);
+            system("pause>null");
             menu();
 			break;
 			//  #####FIM OPÇÃO 3 - TESTE #######
@@ -117,6 +124,7 @@ int menu()
             }
 
 	}
+
 
 
 
