@@ -1,7 +1,8 @@
-#include <stdio.h>  //DECLARAÇÃO DE BIBLIOTECAS
-#include <stdlib.h> //DECLARAÇÃO DE BIBLIOTECAS
-#include <string.h> //DECLARAÇÃO DE BIBLIOTECAS
-#include <ctype.h> //DECLARAÇÃO DE BIBLIOTECAS
+//DECLARAÇÃO DE BIBLIOTECAS
+#include <stdio.h>  
+#include <stdlib.h> 
+#include <string.h> 
+#include <ctype.h> 
 #include <conio.h>
 //DECLARAÇÃO DE VARIAVEIS GLOBAIS
 char nome_usuario[50];
@@ -19,7 +20,7 @@ int menu()
 
 	system("cls"); //LIMPAR TELA
 
-	printf("\n\n\n                            %c%c%c%c%c%c%c%c%c%c MENU %c%c%c%c%c%c%c%c%c%c",205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205);
+	printf("\n\n\n                            %c%c%c%c%c%c%c%c%c%c MENU %c%c%c%c%c%c%c%c%c%c",205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205); //IMPRIMIR CARACTERES ANSII
 	printf("\n\n");
 	printf("\n                   1 - Text: An Autopsy of a Dead Social Network");
 	printf("\n                   2 - Game");
@@ -30,27 +31,32 @@ int menu()
 	printf("       Enter the option: ");
 	scanf("%i", &opcao);
 
-	switch( opcao )
-	{  //ARGUMENTO DO CASO
+	switch( opcao )	{  //ARGUMENTO DO CASO
+	
 
-        case 5: //NESSA CASO SAI
+	//        ###### OPÇÃO 5 - SAIR #######
+        case 5: 
         {
-
             break;
         }
-	case 3:
-	{
-			//        ###### OPÇÃO3 - TESTE #######
+        
+        //        ###### FIM OPÇÃO 5 - SAIR #######
+        
+        
+        //        ###### OPÇÃO 3 - TESTE #######
+	case 3:	{
+			
 			char resposta;
 			int certo=0,errado=0;
-			system("cls"); //LIMPAR TELA
+			system("cls"); 
 			pular_linha();
 			printf("                            Press enter to start %c",16);
-			system("pause>null");
-			system("cls"); //LIMPAR TELA
+			system("pause>null"); //FUNÇÃO SYSTEM PAUSE SEM MENSAGEM
+			system("cls"); 
 			pular_linha();
 
-			// PERGUNTAS
+			// PERGUNTAS DO TESTE
+			
 			//##1##
 			printf("                        1) What is Friendster?\n\n                        a) Brand\n                        b) City\n                        c) Social Network\n                        d) Game\n\n                        	Answer: "); //PERGUNTA UM
 			scanf("%s", &resposta);
@@ -60,6 +66,7 @@ int menu()
                 		errado=errado+1;}
 			system("cls");
 			pular_linha();
+			//##FIM 1##
 
 			//##2##
 			printf("                        2) Complete the sentence: \"At its peak, \n                        the network had well over ______ users, \n                        many in south east Asia\".\n\n                        a) 20 million\n                        b) 1/5 dozen\n                        c) 50 trillion\n                        d) 100 million\n\n                          	Answer: "); //PERGUNTA DOIS                         d) Game\n                           	Answer: "); //PERGUNTA UM
@@ -68,29 +75,35 @@ int menu()
                 		certo=certo+1;}
 			else{
                 		errado=errado+1;}
-            system("cls");
+        		  system("cls");
 			pular_linha();
+			//##FIM 2##
+			
 
-            //##3##
+        		//##3##
 			printf("                        3) What was one of the main reasons for\n                        the collapse suffered by Friendster?\n\n                        a) The name of the site has changed\n                        b) Stopped working weekend\n                        c) Your desing changed\n                        d) was not allowed to people over 25 years\n\n                          	Answer: "); //PERGUNTA TRÊS                         d) Game\n                           	Answer: "); //PERGUNTA UM
 			scanf("%s", &resposta);
 			if (resposta=='C' || resposta=='c'){
                 		certo=certo+1;}
 			else{
                 		errado=errado+1;}
-            system("cls");
+        		 system("cls");
 			pular_linha();
+			//##FIM 3##
+			
 
-            //##4##
+        		 //##4##
 			printf("                        4) Who benefited from the collapse\n                        of Friendster?\n\n                        a) Google\n                        b) Facebook\n                        c) Club Hadware\n                        d) Baixaki\n\n                        	Answer: "); //PERGUNTA QUATRO
 			scanf("%s", &resposta);
 			if (resposta=='B' || resposta=='b'){
                 		certo=certo+1;}
 			else{
                 		errado=errado+1;}
-            system("cls");
+            		system("cls");
 			pular_linha();
-
+			//##FIM 4##
+			
+			
 			//##5##
 			printf("                        5) Where Friendster keeps alive,\n                        afiter collapse, as a social\n                        game plataform?\n\n                        a) America\n                        b) Asia\n                        c) Africa\n                        d) Europe\n\n                        	Answer: "); //PERGUNTA CINCO
 			scanf("%s", &resposta);
@@ -98,12 +111,12 @@ int menu()
                 		certo=certo+1;}
 			else{
                 		errado=errado+1;}
-            system("cls");
+            		system("cls");
 			pular_linha();
+			//##FIM 5##
 
-            //## RESULTADO ##
-            system("cls"); //LIMPAR TELA
-
+            //## RESULTADO TESTE##
+            system("cls"); 
             printf("\n\n\n                          %c%c%c%c%c%c%c%c%c%c Test Result %c%c%c%c%c%c%c%c%c%c",205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205);
             printf("\n\n");
             printf("\n                   Name: %s",nome_usuario);
@@ -111,16 +124,19 @@ int menu()
             printf("\n                   Wrong answers: %i\n\n",errado);
             printf("\n\n                                 Back to menu %c",16);
             system("pause>null");
+            //## FIM RESULTADO TESTE##
+            
             menu();
 			break;
 			//  #####FIM OPÇÃO 3 - TESTE #######
 		}
+	    //        ###### OPÇÃO ? - INVALIDO #######
 		default:{
 
 			printf("\n\n                                Option invalid! ");
 			system("pause>null");
 			menu();
-
+	   //        ###### FIM OPÇÃO ? - INVALIDO #######
             }
 
 	}
