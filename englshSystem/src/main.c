@@ -52,7 +52,7 @@ int menu()
 
 			// PERGUNTAS
 			//##1##
-			printf("                         1) What is Friendster?\n\n                         a) Brand\n                         b) City\n                         c) Social Network\n                         d) Game\n\n                         	Answer: "); //PERGUNTA UM
+			printf("                        1) What is Friendster?\n\n                        a) Brand\n                        b) City\n                        c) Social Network\n                        d) Game\n\n                        	Answer: "); //PERGUNTA UM
 			scanf("%s", &resposta);
 			if ((resposta=='C') || (resposta=='c')){
         			certo=certo+1;}
@@ -62,7 +62,7 @@ int menu()
 			pular_linha();
 
 			//##2##
-			printf("                         2) Complete the sentence: \"At its peak, \n                         the network had well over ______ users, \n                         many in south east Asia\".\n\n                         a) 20 million\n                         b) 1/5 dozen\n                         c) 50 trillion\n                         d) 100 million\n\n                           	Answer: "); //PERGUNTA DOIS                         d) Game\n                           	Answer: "); //PERGUNTA UM
+			printf("                        2) Complete the sentence: \"At its peak, \n                        the network had well over ______ users, \n                        many in south east Asia\".\n\n                        a) 20 million\n                        b) 1/5 dozen\n                        c) 50 trillion\n                        d) 100 million\n\n                          	Answer: "); //PERGUNTA DOIS                         d) Game\n                           	Answer: "); //PERGUNTA UM
 			scanf("%s", &resposta);
 			if (resposta=='D' || resposta=='d'){
                 		certo=certo+1;}
@@ -72,7 +72,7 @@ int menu()
 			pular_linha();
 
             //##3##
-			printf(				"                           3) What was one of the main reasons for the collapse suffered by Friendster?\n                           a) The name of the site has changed\n                           b) Stopped working weekend\n                           c) Your desing changed\n                           d) was not allowed to people over 25 years\n\n                           	Answer: "); //PERGUNTA TRÊS                         d) Game\n                           	Answer: "); //PERGUNTA UM
+			printf("                        3) What was one of the main reasons for\n                        the collapse suffered by Friendster?\n\n                        a) The name of the site has changed\n                        b) Stopped working weekend\n                        c) Your desing changed\n                        d) was not allowed to people over 25 years\n\n                          	Answer: "); //PERGUNTA TRÊS                         d) Game\n                           	Answer: "); //PERGUNTA UM
 			scanf("%s", &resposta);
 			if (resposta=='C' || resposta=='c'){
                 		certo=certo+1;}
@@ -82,7 +82,7 @@ int menu()
 			pular_linha();
 
             //##4##
-			printf(				"                           4) Who benefited from the collapse of Friendster?\n                           a) Google\n                           b) Facebook\n                           c) Club Hadware\n                           d) Baixaki\n\n                           	Answer: "); //PERGUNTA QUATRO
+			printf("                        4) Who benefited from the collapse\n                        of Friendster?\n\n                        a) Google\n                        b) Facebook\n                        c) Club Hadware\n                        d) Baixaki\n\n                        	Answer: "); //PERGUNTA QUATRO
 			scanf("%s", &resposta);
 			if (resposta=='B' || resposta=='b'){
                 		certo=certo+1;}
@@ -92,7 +92,7 @@ int menu()
 			pular_linha();
 
 			//##5##
-			printf(				"                           5) Where Friendster keeps alive, afiter collapse, as a social game plataform?\n                           a) America\n                           b) Asia\n                           c) Africa\n                           d) Europe\n\n                           	Answer: "); //PERGUNTA CINCO
+			printf("                        5) Where Friendster keeps alive,\n                        afiter collapse, as a social\n                        game plataform?\n\n                        a) America\n                        b) Asia\n                        c) Africa\n                        d) Europe\n\n                        	Answer: "); //PERGUNTA CINCO
 			scanf("%s", &resposta);
 			if (resposta=='B' || resposta=='b'){
                 		certo=certo+1;}
