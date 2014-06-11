@@ -1,3 +1,12 @@
+/*SEMANA 2 (7-13) - João - Texto
+	       	- Isabela - Questões de 6 à 10
+		- Thiago - Questões de 1 à 5
+SEMANA 3 (14-20) - DEFINIR NA SEMANA 2 AS ATIVIDADES PARA CADA INTEGRANTE
+SEMANA 4 (21-26) - MELHORAR O CÓDIGO*/
+
+
+
+
 //DECLARAÇÃO DE BIBLIOTECAS
 #include <stdio.h>  
 #include <stdlib.h> 
