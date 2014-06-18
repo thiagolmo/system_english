@@ -36,9 +36,13 @@ static const xIrregularVerbs_t const pxIrregularVerbs[] = {
  * */
 
 //variaveis globais
-char nomeUsuario[50];
+char nomeUsuario[50],resposta[9];
+int acertos,nPergunta;
 
+void vAuxiliaPergunta();
 void vGetUserInfo(char nome_usuario[50]);
+void vVerificaResposta();
+void vResultadoTeste();
 void vExecuteOption(int opcao);
 void pularNlinha(int n);
 void vMakeOption3();
