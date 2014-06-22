@@ -27,7 +27,7 @@ typedef struct{
  * */
 static const xIrregularVerbs_t const pxIrregularVerbs[] = {
 		/*	Infinitivo | Past 	| Participle */
-		{	"arise",   "arose", "arisen"     },
+	
 		{"arise",	"arose","arisen" },
 		{"awake",	"awoke","awoken" },
 		{"be",	"was,were","been" },
