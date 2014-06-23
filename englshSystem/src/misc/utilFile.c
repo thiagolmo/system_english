@@ -5,7 +5,7 @@
  *      Author: jvidiri
  */
 
-#include "util.h"
+#include "utilFile.h"
 
 FILE *arquivo;
 
@@ -16,7 +16,7 @@ void vPrintText(){
 	 char line[255];
 
 	 while (!feof(arquivo)){
-		 //AQUI O CODIGO QUE EU ESTAVA TRABALHANDO
+		 //codigo para ler palavra por palavra e quardar em uma linha.
 //		 char aux[80];//considero que uma palavra pode ter até 80 caracteres
 		 //lemos uma palavra
 //		 fscanf(arquivo,"%s",aux);
@@ -28,6 +28,7 @@ void vPrintText(){
 //			 printf("%s\n",line);
 //			 memset(line,0,sizeof(line));
 //		 }
+		 //codigo para ler o texto inteiro!
 		 fgets(line,255,arquivo);
 	     printf("%s",line);
 	 }

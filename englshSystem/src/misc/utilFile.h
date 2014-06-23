@@ -8,6 +8,8 @@
 #ifndef UTILFILE_H_
 #define UTILFILE_H_
 
+#include "util.h"
+
 /*
  * Classe para manipulação em geral de arquivos.
  * */
