@@ -151,8 +151,143 @@ static const xIrregularVerbs_t const pxIrregularVerbs[] = {
 		{"taught","taught","teach"},
 };
 
-void makeQuestions(){
-	srand(time(NULL));
-	int r = rand();
+/*
+ * pergunta ao usuario se ele deseja continuar
+ * */
+int more(){
+	char aux;
+	int retorno = 0;
 
+	printCentralize("continue? (y|n)");
+	scanf(" %c",&aux);
+	if (toupper(aux) != 'N'){
+		retorno = 1;
+	}
+	return retorno;
 }
+
+/*
+ * Faz as perguntas relacionadas a verbos.
+ * */
+void makeVerbQuestions(){
+	do {
+
+		//preparando a função randomica.
+		srand(time(NULL));
+		//pegando um verbo qualquer
+		int verb = 0;
+		verb = rand() % (sizeof(pxIrregularVerbs) / sizeof(xIrregularVerbs_t));
+		//pegando alternativas aleatórias.
+		int verbAlt1 = 0;
+		int verbAlt2 = 0;
+		int verbAlt3 = 0;
+		//garantindo que não havera alternativas iguais.
+		do {
+			verbAlt1 = rand() % (sizeof(pxIrregularVerbs) / sizeof(xIrregularVerbs_t));
+		} while (verbAlt1 == verb);
+
+		do {
+			verbAlt2 = rand() % (sizeof(pxIrregularVerbs) / sizeof(xIrregularVerbs_t));
+		} while (verbAlt2 == verb);
+
+		do {
+			verbAlt3 = rand() % (sizeof(pxIrregularVerbs) / sizeof(xIrregularVerbs_t));
+		} while (verbAlt3 == verb);
+
+		//escolhendo uma questão.
+		int question = rand();
+		char printAux[50];
+
+		//fazendo as questões.
+		switch (question % 6) {
+		case 0:
+			//get infinitive and asks for participle.
+			sprintf(printAux,"Verb : %s" ,pxIrregularVerbs[verb].pvInfinitive);
+			printCentralize(printAux);
+			printCentralize("What is the Participle?");
+			sprintf(printAux, "a)%s", pxIrregularVerbs[verbAlt1].pvParticiple);
+			printCentralize(printAux);
+			sprintf(printAux, "b)%s", pxIrregularVerbs[verbAlt2].pvParticiple);
+			printCentralize(printAux);
+			sprintf(printAux, "c)%s", pxIrregularVerbs[verb].pvParticiple);
+			printCentralize(printAux);
+			sprintf(printAux, "d)%s", pxIrregularVerbs[verbAlt3].pvParticiple);
+			printCentralize(printAux);
+			break;
+		case 1:
+			//get infinitive and asks for past.
+			sprintf(printAux,"Verb : %s" ,pxIrregularVerbs[verb].pvInfinitive);
+			printCentralize(printAux);
+			printCentralize("What is the Past?");
+			sprintf(printAux, "a)%s", pxIrregularVerbs[verbAlt1].pvPast);
+			printCentralize(printAux);
+			sprintf(printAux, "b)%s", pxIrregularVerbs[verb].pvPast);
+			printCentralize(printAux);
+			sprintf(printAux, "c)%s", pxIrregularVerbs[verbAlt3].pvPast);
+			printCentralize(printAux);
+			sprintf(printAux, "d)%s", pxIrregularVerbs[verbAlt2].pvPast);
+			printCentralize(printAux);
+			break;
+		case 2:
+			//get participle and asks for infinitive.
+			sprintf(printAux,"Verb : %s" ,pxIrregularVerbs[verb].pvParticiple);
+			printCentralize(printAux);
+			printCentralize("What is the Infinitive?");
+			sprintf(printAux, "a)%s", pxIrregularVerbs[verbAlt2].pvInfinitive);
+			printCentralize(printAux);
+			sprintf(printAux, "b)%s", pxIrregularVerbs[verbAlt1].pvInfinitive);
+			printCentralize(printAux);
+			sprintf(printAux, "c)%s", pxIrregularVerbs[verbAlt3].pvInfinitive);
+			printCentralize(printAux);
+			sprintf(printAux, "d)%s", pxIrregularVerbs[verb].pvInfinitive);
+			printCentralize(printAux);
+			break;
+		case 3:
+			//get participle and asks for past.
+			sprintf(printAux,"Verb : %s" ,pxIrregularVerbs[verb].pvParticiple);
+			printCentralize(printAux);
+			printCentralize("What is the past?");
+			sprintf(printAux, "a)%s", pxIrregularVerbs[verb].pvPast);
+			printCentralize(printAux);
+			sprintf(printAux, "b)%s", pxIrregularVerbs[verbAlt2].pvPast);
+			printCentralize(printAux);
+			sprintf(printAux, "c)%s", pxIrregularVerbs[verbAlt3].pvPast);
+			printCentralize(printAux);
+			sprintf(printAux, "d)%s", pxIrregularVerbs[verbAlt1].pvPast);
+			printCentralize(printAux);
+			break;
+		case 4:
+			//get past and asks for infinitive.
+			sprintf(printAux,"Verb : %s" ,pxIrregularVerbs[verb].pvPast);
+			printCentralize(printAux);
+			printCentralize("What is the Infinitive?");
+			sprintf(printAux, "a)%s", pxIrregularVerbs[verbAlt1].pvInfinitive);
+			printCentralize(printAux);
+			sprintf(printAux, "b)%s", pxIrregularVerbs[verb].pvInfinitive);
+			printCentralize(printAux);
+			sprintf(printAux, "c)%s", pxIrregularVerbs[verbAlt3].pvInfinitive);
+			printCentralize(printAux);
+			sprintf(printAux, "d)%s", pxIrregularVerbs[verbAlt2].pvInfinitive);
+			printCentralize(printAux);
+			break;
+		case 5:
+			//get past and asks for participle.
+			sprintf(printAux,"Verb : %s" ,pxIrregularVerbs[verb].pvPast);
+			printCentralize(printAux);
+			printCentralize("What is the participle?");
+			sprintf(printAux, "a)%s", pxIrregularVerbs[verb].pvParticiple);
+			printCentralize(printAux);
+			sprintf(printAux, "b)%s", pxIrregularVerbs[verbAlt2].pvParticiple);
+			printCentralize(printAux);
+			sprintf(printAux, "c)%s", pxIrregularVerbs[verbAlt3].pvParticiple);
+			printCentralize(printAux);
+			sprintf(printAux, "d)%s", pxIrregularVerbs[verbAlt1].pvParticiple);
+			printCentralize(printAux);
+			break;
+		default:
+			break;
+		}
+		//TODO contabilizar pontuação.
+	} while (more() == 0);
+}
+

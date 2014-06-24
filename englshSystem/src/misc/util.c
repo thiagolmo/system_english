@@ -54,7 +54,7 @@ void pularNlinha(int n) {
 void vWaitForAnyKey() {
 	fflush(stdin);
 	char aux[10];
-	scanf("%c", aux);
+	scanf(" %c", aux);
 }
 
 /*

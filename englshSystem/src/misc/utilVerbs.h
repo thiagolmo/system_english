@@ -19,5 +19,6 @@ typedef struct{
 	char* pvParticiple;
 }xIrregularVerbs_t;
 
+void makeVerbQuestions();
 
 #endif /* UTILVERBS_H_ */

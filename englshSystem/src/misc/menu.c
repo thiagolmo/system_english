@@ -7,6 +7,7 @@
 
 #include "menu.h"
 #include "utilsQuestions.h"
+#include "utilVerbs.h"
 #include "utilFile.h"
 
 /**
@@ -18,24 +19,30 @@ void vMakeOption1() {
 		vPrintText();
 		vcloseFile();
 	}
+	pularNlinha(1);
 }
 
-/**
- *	realiza a opção numero 2 do menu.
- */
-void vMakeOption2(){
-	printf("Not implemented yet.");
-}
-
-/**
- * Realiza a opção 3 do menu.
- * */
-void vMakeOption3() {
+void showInitMessage() {
 	char printAux[255];
 	pularNlinha(8);
-	sprintf(printAux,"Press enter to start... %c", 16);
+	sprintf(printAux, "Press enter to start... %c", 16);
 	printCentralize(printAux);
 	vWaitForAnyKey();
+}
+
+/**
+ *	realiza a opção numero 3 do menu.
+ */
+void vMakeOption3(){
+	showInitMessage();
+	makeVerbQuestions();
+}
+
+/**
+ * Realiza a opção 2 do menu.
+ * */
+void vMakeOption2() {
+	showInitMessage();
 
 	result_t result;
 	result = xMakeQuestions();
@@ -47,7 +54,7 @@ void vMakeOption3() {
  *	realiza a opção numero 4 do menu.
  */
 void vMakeOption4(){
-	printf("Not implemented yet.");
+	printCentralize("Not implemented yet.");
 }
 
 /*
@@ -83,8 +90,8 @@ void vPrintMainMenu() {
 	printCentralize("MENU");
 	pularNlinha(2);
 	printCentralize("1 - Text: An Autopsy of a Dead Social Network");
-	printCentralize("2 - Game                                     ");
-	printCentralize("3 - Test                                     ");
+	printCentralize("2 - Text test                                ");
+	printCentralize("3 - Verbs games                              ");
 	printCentralize("4 - Raking                                   ");
 	printCentralize("5 - Exit                                     ");
 	printCentralize("Enter the option:");
